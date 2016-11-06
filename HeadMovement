@@ -16,7 +16,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Quaternion att = Input.gyro.attitude; 		// Create Quatternion named "att". It gets the value of the gyro
-		att = Quaternion.Euler(90f, 0f, 0f) * new Quaternion(att.x, att.y, -att.z -att.w); 		// orientation stuff?
+		att = Quaternion.Euler(90f, 0f, 0f) * new Quaternion(att.x, att.y, -att.z, -att.w); 		// orientation stuff?
 		transform.rotation = att; 		// transforms the rotation attribute of the assigned game object from the "att" falue
 
 	}
